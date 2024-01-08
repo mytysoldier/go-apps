@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script>
+        function getWeather() {
+            // 選択された都市のIDを取得
+            var cityId = document.getElementById("citySelect").value;
+
+            // GETリクエストを送信
+            window.location.href = "/weather?id=" + cityId;
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="color: rebeccapurple;">Weather App</h1>
+
+    <label for="citySelect">都市を選択してください:</label>
+    <select id="citySelect">
+        <option value="2130037">北海道</option>
+        <option value="1850144">東京</option>
+        <option value="1860291">神奈川</option>
+        <option value="1856057">名古屋</option>
+        <option value="1853909">大阪</option>
+        <option value="1863967">福岡</option>
+        <option value="1894616">沖縄</option>
+    </select>
+
+    <button onclick="getWeather()">取得</button>
+
+</body>
+
+</html>
